@@ -1,0 +1,6 @@
+TestCase2/F1/xbi.txt
+TestCase2/F1/xan.txt
+TestCase2/F1/xai.txt
+TestCase2/F1/xao.txt
+TestCase2/F1/xaj.txt
+TestCase2/F1/xag.txt
