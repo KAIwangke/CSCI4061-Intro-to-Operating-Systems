@@ -1,19 +1,17 @@
 /*test machine: csel-kh1250-04.cselabs.umn.edu
 * date: 10/21/21
-* name: Michael Allrich, Lee Knutson, Ke Wang
-* x500: allri004, knut0577, wan00802
 */
 
--purpose of the program
+### purpose of the program
     Mimic a unix shell, with rewritten ls, cd, and wc functions.
 
--how to compile
+### how to compile
      Navigate to a working directory within a terminal, copy file contents into the directory. Then execute the makefile with `make all`. Then execute the program with `./shell'. From there, the user can execute given commands, pipe outputs, etc. Enter "exit" to exit the shell program and return to the regular system terminal shell. 
 
--what the program does
+### what the program does
      Mimic a unix shell in which a user can input and execute commands and send results either to a text file, another command, or simply print to screen (default).
      
--functions
+### functions
     SHELL:
         main
             Runs a while loop that continues until the exit command is called. For every other input, call basecommand on the input in order to execute it
@@ -40,7 +38,7 @@
         wc
             Prints the number of lines, words, and characters present in the input depending on the mode.
             
--Test Cases: 
+### Test Cases: 
     ls 
     ls  -R
     wc cd.c (or any file in the directory really)
@@ -56,10 +54,3 @@
     ls | wc | wc > out.txt
     /bin/echo hello > out.txt
     /bin/echo some separated words >> out.txt
-
-
--contributions
-    Michael Allrich: Co-wrote shell
-    Ke Wang: Wrote wc, ls, cd functions
-    Lee Knutson: Co-wrote shell
-    All: Much more debugging
