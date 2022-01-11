@@ -4,23 +4,31 @@
 */
 
 ### Purpose of the Program
-	Create a linked list based on the contents of a file using concurrently running threads. The threads create nodes featuring the line number and character content of a given line before inserting it into the list and assigning it a sequence number based on when it was added. Afterward, the list is traversed, printing the sequence number, line number, and content of each node.
+
+Create a linked list based on the contents of a file using concurrently running threads. The threads create nodes featuring the line number and character content of a given line before inserting it into the list and assigning it a sequence number based on when it was added. Afterward, the list is traversed, printing the sequence number, line number, and content of each node.
 
 ### how to compile
-	Navigate to a working directory within a terminal, copy file contents into the directory. Then execute the makefile with `make`. Execute the program with `./tlist <text_file> <#_threads>`, where “text file” is the name of a valid txt file and “# threads” is the number of threads (between 1 and 16) that the user wishes to work on the file. The output will be displayed to the terminal upon completion.
+
+Navigate to a working directory within a terminal, copy file contents into the directory. Then execute the makefile with `make`. Execute the program with `./tlist <text_file> <#_threads>`, where “text file” is the name of a valid txt file and “# threads” is the number of threads (between 1 and 16) that the user wishes to work on the file. The output will be displayed to the terminal upon completion.
 
 ### what the program does
-	Read_line: Takes in a filename and reads a line from it.
-	Traversal: Traverses the linked list and prints the sequence number, line number, and content of each node.
-	Insert: Inserts a node into the linked list based on the line number of the node. Nodes are inserted in ascending order. Assigns the node’s sequence number and adds it to the sequence counter.
-	Create_node: Allocates the memory for and creates a new node with the given line number and content.
-	Process_file: Locks the line before calling readline, unlocks the line, locks the list, and adds the line to the linked list.
+	
+Read_line: Takes in a filename and reads a line from it.
+
+Traversal: Traverses the linked list and prints the sequence number, line number, and content of each node.
+
+Insert: Inserts a node into the linked list based on the line number of the node. Nodes are inserted in ascending order. Assigns the node’s sequence number and adds it to the sequence counter.
+
+Create_node: Allocates the memory for and creates a new node with the given line number and content.
+
+Process_file: Locks the line before calling readline, unlocks the line, locks the list, and adds the line to the linked list.
    
 ### assumptions  
-    Each line was at most 256 chars long.
+
+Each line was at most 256 chars long.
     
 
--test cases
+### test cases
 ./tlist test.txt 1
 ./tlist test.txt 3
 ./tlist test.txt 10
