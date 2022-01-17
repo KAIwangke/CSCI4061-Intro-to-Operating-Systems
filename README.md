@@ -13,7 +13,7 @@
 
 - Project5. Utilize a message queue to have a client and server program communicate with one another. 
 
-CSCI4061-Fall-2021
+CSCI4061-Fall-2021-university of minnesota 
 
 
 
